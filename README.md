@@ -1,146 +1,247 @@
-# CTIS Planner - Full-Stack Application
+# CTIS Planner – Full-Stack Curriculum Assistant
 
-A complete curriculum planning tool for Bilkent University CTIS students, rebuilt as a modular full-stack application.
+A modular full-stack curriculum management system developed for the CTIS faculty to efficiently manage, organize, and analyze curriculum structures.
 
-## 📁 Project Structure
+Built using Node.js, Express.js, Supabase (PostgreSQL), and a frontend powered by HTML, CSS, and Vanilla JavaScript, the system provides an interactive and scalable platform for better curriculum planning and oversight.
+
+**Live Application:**
+[https://ctisplanner-fullstack.up.railway.app/](https://ctisplanner-fullstack.up.railway.app/)
+
+---
+
+## Overview
+
+CTIS Planner allows faculty to:
+
+* Organize and restructure semester layouts
+* Manage course placements across academic terms
+* Assign IS electives
+* Oversee professor–course associations and section allocations
+* Visualize and manage prerequisite relationships
+* Save, update, and maintain multiple curriculum versions
+
+The application evolved from a filesystem-based prototype into a fully deployed cloud-backed system.
+
+---
+
+# 🏗️ Architecture
+
+## 🖥️ Backend
+
+* **Node.js**
+* **Express.js**
+* **Supabase (PostgreSQL database)**
+* Hosted on **Railway**
+
+## 🎨 Frontend
+
+* Vanilla JavaScript
+* Modular architecture
+* Modern CSS
+* Clean separation of:
+
+  * State management
+  * API communication
+  * UI logic
+
+---
+
+# 📁 Project Structure
 
 ```
 ctisplanner-fullstack/
-├── backend/
-│   ├── server.js                 # Express server
-│   ├── package.json              # Node.js dependencies
-│   ├── routes/
-│   │   ├── catalogRoutes.js      # Catalog API routes
-│   │   └── layoutRoutes.js       # Layout save/load routes
-│   ├── controllers/
-│   │   ├── catalogController.js  # Catalog business logic
-│   │   └── layoutController.js   # Layout management logic
-│   └── data/
-│       ├── catalog.json          # Course catalog data
-│       └── layouts/              # Saved user layouts (auto-created)
+├── README.md                     # Project documentation
+├── start.sh                      # Shell script to start the app
+├── start.bat                     # Windows batch start script
+├── package.json                  # Root npm config
+├── package-lock.json             # Lockfile for npm
+├── env.example                   # Template for environment variables
 │
-└── frontend/
-    ├── index.html                # Main HTML structure
-    ├── css/
-    │   └── styles.css            # All application styles
-    └── js/
-        ├── state.js              # Application state management
-        ├── utils.js              # Helper functions
-        ├── api.js                # Backend API communication
-        └── app.js                # Main application logic & UI
+├── frontend/                     # Frontend client
+│   ├── index.html                # Main HTML
+│   ├── css/
+│   │   └── styles.css            # Global CSS
+│   └── js/
+│       ├── utils.js              # Utility functions
+│       ├── state.js              # Main app state logic
+│       ├── app.js                # UI and interaction logic
+│       └── api.js                # API interaction with backend
+│
+├── backend/                      # Backend API server
+│   ├── server.js                 # Main Express server entrypoint
+│   ├── routes/
+│   │   ├── layoutRoutes.js       # Express routes for layouts
+│   │   └── catalogRoutes.js      # Express routes for course catalog
+│   ├── controllers/
+│   │   ├── layoutController.js   # Controller logic for layouts
+│   │   └── catalogController.js  # Controller logic for catalog
+│   ├── data/                     # Legacy data store (filesystem JSON)
+│   │   ├── layouts/
+│   │   │   ├── current.json
+│   │   │   └── catalog.json      # (Older iteration only — before Supabase)
+│   │   └── ...                   # Deprecated JSON files
+│   ├── node_modules/             # Installed backend dependencies
+│   └── .env                     # (Not committed) Actual environment variables
+│
+└── .gitignore                    # Ignore patterns for Git
+
 ```
 
-## 🚀 Getting Started
+---
+
+### Environment Variables
+
+Create a `.env` file inside the backend folder:
+
+```
+SUPABASE_URL=your_project_url
+SUPABASE_ANON_KEY=your_anon_key
+PORT=3000
+```
+
+---
+
+# Local Development
+
+## Getting Started
 
 ### Prerequisites
 
 - Node.js (v14 or higher)
 - npm (comes with Node.js)
 
-### Installation
+## 1️⃣ Install Dependencies
 
-1. **Navigate to the backend directory:**
-   ```bash
-   cd backend
-   ```
+```bash
+cd backend
+npm install
+```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+## 2️⃣ Run the Server
 
-### Running the Application
+```bash
+npm start
+```
 
-1. **Start the server:**
-   ```bash
-   npm start
-   ```
+Or for development:
 
-   Or for development with auto-restart:
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+```
 
-2. **Open your browser:**
-   ```
-   http://localhost:3000
-   ```
+Then open:
 
-The server will:
-- Serve the frontend files
-- Provide API endpoints for catalog and layout management
-- Auto-save your layout every 30 seconds
+```
+http://localhost:3000
+```
 
-## 🔧 API Endpoints
+---
 
-### Catalog
-- `GET /api/catalog` - Get all courses, professors, and IS electives
+# API Endpoints
 
-### Layouts
-- `GET /api/layouts/current` - Get current working layout
-- `POST /api/layouts/current` - Save current working layout
-- `GET /api/layouts` - Get all saved layouts
-- `POST /api/layouts` - Save new named layout
-- `GET /api/layouts/:id` - Get specific layout
-- `DELETE /api/layouts/:id` - Delete layout
+## Catalog
 
-## 📦 Features
+* `GET /api/catalog`
 
-- ✅ **Drag & Drop:** Move courses between semesters
-- ✅ **IS Electives:** Assign information systems electives to slots
-- ✅ **Prerequisites:** Visual prerequisite arrows and editing
-- ✅ **Professor Management:** Track course sections by professor
-- ✅ **Analytics:** Credit distribution, workload analysis, prerequisite tracking
-- ✅ **Auto-Save:** Layout automatically saved every 30 seconds
-- ✅ **Persistent Storage:** Layouts saved to backend filesystem
-- ✅ **JSON Export/Import:** Export and import curriculum plans
+  * Returns all courses, professors, and IS electives
 
-## 🛠️ Development
+## Layouts
 
-### Backend Development
+* `GET /api/layouts/current`
+* `POST /api/layouts/current`
+* `GET /api/layouts`
+* `POST /api/layouts`
+* `GET /api/layouts/:id`
+* `DELETE /api/layouts/:id`
 
-The backend uses:
-- **Express.js** for the web server
-- **Filesystem storage** for layouts (no database needed)
-- **CORS** enabled for development
+All layout data is now persisted in **Supabase**, not the local filesystem.
 
-### Frontend Development
+---
 
-The frontend is pure vanilla JavaScript with:
-- **No framework dependencies** (no React, Vue, etc.)
-- **Modular architecture** (separate state, utils, API, app logic)
-- **Modern CSS** with CSS variables for theming
+# Previous Iteration (Filesystem Version)
 
-### Adding New Features
+The original full-stack version used:
 
-1. **New API endpoint:** Add route in `backend/routes/`, controller in `backend/controllers/`
-2. **New UI feature:** Add logic to `frontend/js/app.js`, API calls to `frontend/js/api.js`
-3. **New data:** Update `backend/data/catalog.json`
+* Express backend
+* Local JSON files for storage
+* `backend/data/catalog.json`
+* `backend/data/layouts/current.json`
+* Layouts saved inside:
 
-## 📝 Notes
+  ```
+  backend/data/layouts/
+  ```
 
-- **No Authentication:** This version has no user authentication (single-user application)
-- **File Storage:** Layouts are stored as JSON files in `backend/data/layouts/`
-- **Auto-Save:** Current layout auto-saves every 30 seconds to `current.json`
-- **Named Saves:** You can save multiple named versions via the Save modal
+### How It Worked
 
-## 🐛 Troubleshooting
+* Layouts were saved as JSON files
+* Auto-save every 30 seconds
+* No database required
+* Single-user environment
 
-### Server won't start
-- Make sure you're in the `backend/` directory
-- Run `npm install` to ensure dependencies are installed
-- Check that port 3000 is not already in use
+### Limitations
 
-### Layout not saving
-- Check browser console for errors
-- Ensure `backend/data/layouts/` directory exists (auto-created on first save)
-- Verify server is running
+* No cloud persistence
+* Not scalable
+* Data lost on redeploy
+* Not production-ready
 
-### Catalog not loading
-- Check that `backend/data/catalog.json` exists
-- Look for errors in server console
-- Verify API endpoint returns data: `http://localhost:3000/api/catalog`
+---
 
-## 📄 License
+# Current Version Improvements
 
-Original CTIS Planner © 2025 - Rebuilt as full-stack application
+| Feature     | Old Version       | Current Version     |
+| ----------- | ----------------- | ------------------- |
+| Storage     | Local JSON        | Supabase PostgreSQL |
+| Deployment  | Localhost         | Railway Cloud       |
+| Persistence | Local only        | Cloud persistent    |
+| Scalability | Single-user       | Production-ready    |
+| Data safety | Risk of overwrite | Managed DB          |
+
+---
+
+# Features
+
+* Drag & Drop semester planning
+* IS elective assignment
+* Professor-course linking
+* Prerequisite visualization
+* Modular frontend architecture
+* REST API backend
+* Cloud database storage
+* Production deployment
+
+---
+
+# Troubleshooting
+
+### Server not starting?
+
+* Check `.env` file
+* Ensure Supabase credentials are correct
+* Verify Railway environment variables
+
+### Data not saving?
+
+* Check Supabase table configuration
+* Verify RLS (Row Level Security) policies
+* Inspect Railway logs
+
+---
+
+# Future Improvements
+
+* Authentication (Supabase Auth)
+* Multi-user accounts
+* Role-based permissions
+* Professor dashboards
+* Analytics dashboard
+* Export to PDF
+* Performance optimizations
+
+---
+
+# 📄 License
+
+CTIS Planner © 2026
+Developed as a full-stack academic planning system.
