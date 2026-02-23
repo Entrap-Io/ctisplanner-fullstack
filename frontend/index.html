@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTISPlanner - Curriculum Assistant v22 (Full-Stack)</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- TOP BAR -->
+    <div id="topbar">
+      <div class="logo">CTIS<span>Planner</span></div>
+      <button class="tab-btn active" onclick="showView('map')">Map</button>
+      <button class="tab-btn" onclick="showView('is')">IS Electives</button>
+      <button class="tab-btn" onclick="showView('profs')">Professors</button>
+      <button class="tab-btn" onclick="showView('analytics')">Analytics</button>
+      <div class="topbar-sep"></div>
+      <div class="topbar-right">
+        <button class="btn sm" onclick="showSave()">💾 Save</button>
+        <button class="btn sm" onclick="showLoad()">📁 Load</button>
+        <button class="btn sm" onclick="triggerJSONLoad()">🗂️ Load JSON</button>
+        <button class="btn sm primary" onclick="doExport()">↓ JSON</button>
+      </div>
+    </div>
+
+    <!-- MAP VIEW -->
+    <div id="map-view" class="view active">
+      <div class="tbar">
+        <span class="tblbl">Legend</span>
+        <div class="li"><div class="ldot" style="background:var(--ctis-bd)"></div>CTIS</div>
+        <div class="li"><div class="ldot" style="background:var(--nc-bd)"></div>Non-CTIS</div>
+        <div class="li"><div class="ldot" style="background:var(--is-bd)"></div>IS Elective Slot</div>
+        <div class="li"><div class="ldot" style="background:var(--sl-bd)"></div>Elective Slot</div>
+        <div class="tbsep"></div>
+        <label class="li"><input type="checkbox" id="chk-arr" checked onchange="renderArrows()"> Prerequisites</label>
+        <label class="li"><input type="checkbox" id="chk-mv" checked onchange="renderAll()"> Show moved</label>
+        <div class="tbsep"></div>
+        <span class="tblbl">Mode</span>
+        <div class="mpill on edit-on" id="m-edit" onclick="setMode('edit')">Edit Layout</div>
+        <div class="mpill" id="m-pre" onclick="setMode('pre')">Edit Prerequisites</div>
+        <div class="tbsep"></div>
+        <button class="btn sm grn" onclick="newCourse()">+ Course</button>
+        <button class="btn sm" onclick="resetLayout()">Reset</button>
+        <div style="margin-left:auto;font-size:10px;color:var(--muted)" id="cinfo"></div>
+      </div>
+      <div id="cwrap">
+        <div id="canvas">
+          <svg id="asvg">
+            <defs>
+              <marker id="ah" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+                <polygon points="0 0,6 2.5,0 5" fill="rgba(88,166,255,.4)" />
+              </marker>
+              <marker id="ah-sel" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+                <polygon points="0 0,6 2.5,0 5" fill="rgba(245,158,11,.9)" />
+              </marker>
+            </defs>
+          </svg>
+          <div id="slbg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IS ELECTIVES VIEW -->
+    <div id="is-view" class="view">
+      <div id="is-catalog">
+        <div id="is-cat-hdr">
+          <h2>IS Electives Catalog</h2>
+          <div style="font-size:11px;color:var(--muted)">Click "Map" to turn an IS elective into a normal course on the map.</div>
+        </div>
+        <div id="is-cat-list"></div>
+      </div>
+      <div id="is-slots-panel">
+        <div id="is-slots-hdr">
+          <h2>IS Elective Slots in Curriculum</h2>
+          <p>Click a slot to assign an IS elective; clearing restores original prereqs.</p>
+        </div>
+        <div id="is-slots-body"></div>
+      </div>
+    </div>
+
+    <!-- PROFESSORS VIEW -->
+    <div id="profs-view" class="view">
+      <div style="padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0">
+        <div>
+          <h2 style="font-size:15px;font-weight:700">Faculty Profiles</h2>
+          <p style="font-size:11px;color:var(--muted);margin-top:3px">Click a card to expand. Hover courses to remove.</p>
+        </div>
+        <button class="btn sm" onclick="showAddProf()">+ Professor</button>
+      </div>
+      <div id="prof-view-inner">
+        <div id="prof-grid"></div>
+      </div>
+    </div>
+
+    <!-- ANALYTICS VIEW -->
+    <div id="analytics-view" class="view">
+      <div id="analytics-tabs">
+        <button class="a-tab active" onclick="showATab('overview',this)">Overview</button>
+        <button class="a-tab" onclick="showATab('courses',this)">All Courses</button>
+        <button class="a-tab" onclick="showATab('workload',this)">Prof Workload</button>
+        <button class="a-tab" onclick="showATab('prereqs',this)">Prerequisites</button>
+        <button class="a-tab" onclick="showATab('credits',this)">Credit Distribution</button>
+        <button class="a-tab" onclick="showATab('isel',this)">IS Elective Usage</button>
+      </div>
+      <div id="analytics-body">
+        <div id="at-overview" class="analytics-section active"></div>
+        <div id="at-courses" class="analytics-section"></div>
+        <div id="at-workload" class="analytics-section"></div>
+        <div id="at-prereqs" class="analytics-section"></div>
+        <div id="at-credits" class="analytics-section"></div>
+        <div id="at-isel" class="analytics-section"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODALS -->
+  <div class="modal-overlay" id="cm">
+    <div class="modal">
+      <div class="modal-hdr"><h3 id="cm-t">Course</h3><button class="modal-close" onclick="hideCM()">×</button></div>
+      <div class="modal-body" id="cm-body"></div>
+      <div class="modal-foot" id="cm-foot"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="is-pick-modal">
+    <div class="modal" style="max-width:680px">
+      <div class="modal-hdr"><h3 id="isp-title" style="color:var(--amber)">Assign IS Elective</h3><button class="modal-close" onclick="closeModal('is-pick-modal')">×</button></div>
+      <div class="modal-body">
+        <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Select a course to assign to this elective slot.</p>
+        <div style="margin-bottom:10px;display:flex;gap:8px;align-items:center">
+          <input id="isp-search" placeholder="Filter..." style="flex:1;background:var(--card);border:1px solid var(--border);border-radius:6px;padding:7px 10px;color:var(--text);font-size:12px;outline:none;font-family:var(--font)" oninput="filterISPick()">
+          <button class="btn sm danger" onclick="clearSlot()">Clear Slot</button>
+        </div>
+        <div class="is-grid" id="is-pick-grid"></div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn" onclick="closeModal('is-pick-modal')">Cancel</button>
+        <button class="btn primary" onclick="confirmISPick()">Assign Selected</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="pm">
+    <div class="modal" style="min-width:360px;max-width:420px">
+      <div class="modal-hdr"><h3>Add Professor</h3><button class="modal-close" onclick="closeModal('pm')">×</button></div>
+      <div class="modal-body">
+        <div class="form-row"><label>Full Name</label><input id="pm-n" placeholder="Dr. ..."></div>
+        <div class="form-row"><label>Dept</label><input id="pm-d" value="CTIS"></div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn" onclick="closeModal('pm')">Cancel</button>
+        <button class="btn primary" onclick="saveProf()">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="slm">
+    <div class="modal">
+      <div class="modal-hdr"><h3 id="slm-t">Save</h3><button class="modal-close" onclick="closeModal('slm')">×</button></div>
+      <div class="modal-body" id="slm-b"></div>
+      <div class="modal-foot"><button class="btn" onclick="closeModal('slm')">Close</button></div>
+    </div>
+  </div>
+
+  <!-- CONTEXT MENU -->
+  <div class="ctxm" id="ctxm">
+    <div class="cxi blue" onclick="ctxEdit()">✎ Edit Course</div>
+    <div class="cx-sep"></div>
+    <div class="cxi" id="ctx-mkis" onclick="ctxMkIS()">⭐ Make IS Elective</div>
+    <div class="cxi" id="ctx-rmis" onclick="ctxRmIS()">❌ Remove IS Elective</div>
+    <div class="cx-sep"></div>
+    <div class="cxi red" onclick="ctxDel()">🗑 Delete</div>
+  </div>
+
+  <input type="file" id="file-input" accept=".json" style="display:none" onchange="handleFileLoad(event)">
+
+  <div id="pre-hint">Click a course FROM, then click another TO to toggle prerequisite arrow</div>
+
+  <!-- Load Scripts -->
+  <script src="/js/state.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

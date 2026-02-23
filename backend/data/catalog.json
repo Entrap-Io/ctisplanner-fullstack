@@ -1,0 +1,1529 @@
+{
+  "professors": [
+    {
+      "id": "tin",
+      "name": "Serpil Tın",
+      "dept": "CTIS"
+    },
+    {
+      "id": "nese",
+      "name": "Neşe Şahin Özçelik",
+      "dept": "CTIS"
+    },
+    {
+      "id": "sezer",
+      "name": "Leyla Sezer",
+      "dept": "CTIS"
+    },
+    {
+      "id": "liman",
+      "name": "Burcu Liman",
+      "dept": "CTIS"
+    },
+    {
+      "id": "sevgi",
+      "name": "Cüneyt Sevgi",
+      "dept": "CTIS"
+    },
+    {
+      "id": "topcu",
+      "name": "Saitlım Topcu",
+      "dept": "CTIS"
+    },
+    {
+      "id": "serim",
+      "name": "Nimet Ceren Serim",
+      "dept": "CTIS"
+    },
+    {
+      "id": "oumout",
+      "name": "Oumout Chousein Oglou",
+      "dept": "CTIS"
+    },
+    {
+      "id": "amjad",
+      "name": "Seyid Amjad Ali",
+      "dept": "CTIS"
+    },
+    {
+      "id": "serkan",
+      "name": "Serkan Güneş",
+      "dept": "CTIS"
+    },
+    {
+      "id": "hamdi",
+      "name": "Hamdi Murat Yıldırım",
+      "dept": "CTIS"
+    },
+    {
+      "id": "erkan",
+      "name": "Erkan Uçar",
+      "dept": "CTIS"
+    },
+    {
+      "id": "alsac",
+      "name": "Çağal Alsaç",
+      "dept": "CTIS"
+    },
+    {
+      "id": "akdemir",
+      "name": "Burak Akdemir",
+      "dept": "CTIS"
+    },
+    {
+      "id": "evrin",
+      "name": "Volkan Evrin",
+      "dept": "CTIS"
+    },
+    {
+      "id": "fisek",
+      "name": "Hayrullah Doruk Fişek",
+      "dept": "CTIS"
+    },
+    {
+      "id": "ergezer",
+      "name": "Kemal Ergezer",
+      "dept": "CTIS"
+    },
+    {
+      "id": "herk",
+      "name": "Kadir Herkiloğlu",
+      "dept": "CTIS"
+    },
+    {
+      "id": "sagdi",
+      "name": "Serhat Sağdıoğlu",
+      "dept": "CTIS"
+    },
+    {
+      "id": "jamel",
+      "name": "Jamel Ben Chafra",
+      "dept": "CTIS"
+    },
+    {
+      "id": "gunes",
+      "name": "Güneş Karamullaoglu",
+      "dept": "CTIS"
+    },
+    {
+      "id": "esin",
+      "name": "Esin Şenol",
+      "dept": "CTIS"
+    }
+  ],
+  "courses": [
+    {
+      "origSem": 1,
+      "id": "c151",
+      "code": "CTIS 151",
+      "short": "151",
+      "name": "Introduction to Programming",
+      "credits": 4,
+      "ects": 6.5,
+      "sem": 1,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [
+        {
+          "profId": "tin",
+          "sem": "fall",
+          "fallCount": 4,
+          "springCount": 0
+        },
+        {
+          "profId": "nese",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 2
+        },
+        {
+          "profId": "sezer",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 2
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 10,
+      "y": 180
+    },
+    {
+      "origSem": 1,
+      "id": "c163",
+      "code": "CTIS 163",
+      "short": "163",
+      "name": "Discrete Mathematics",
+      "credits": 3,
+      "ects": 5,
+      "sem": 1,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [
+        {
+          "profId": "topcu",
+          "sem": "fall",
+          "fallCount": 3,
+          "springCount": 0
+        },
+        {
+          "profId": "hamdi",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 3
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 10,
+      "y": 400
+    },
+    {
+      "origSem": 1,
+      "id": "c165",
+      "code": "CTIS 165",
+      "short": "165",
+      "name": "Fundamentals of Information Systems",
+      "credits": 3,
+      "ects": 5,
+      "sem": 1,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [
+        {
+          "profId": "erkan",
+          "sem": "fall",
+          "fallCount": 3,
+          "springCount": 0
+        },
+        {
+          "profId": "oumout",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 2
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 10,
+      "y": 490
+    },
+    {
+      "origSem": 1,
+      "id": "ceng101",
+      "code": "ENG 101",
+      "short": "ENG101",
+      "name": "English and Composition I",
+      "credits": 3,
+      "ects": 5,
+      "sem": 1,
+      "type": "non-ctis",
+      "offered": "fall",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 10,
+      "y": 580
+    },
+    {
+      "origSem": 1,
+      "id": "cge100",
+      "code": "GE 100",
+      "short": "GE100",
+      "name": "Orientation",
+      "credits": 1,
+      "ects": 2,
+      "sem": 1,
+      "type": "non-ctis",
+      "offered": "fall",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 10,
+      "y": 540
+    },
+    {
+      "origSem": 1,
+      "id": "cturk101",
+      "code": "TURK 101",
+      "short": "TRK101",
+      "name": "Turkish I",
+      "credits": 2,
+      "ects": 3.5,
+      "sem": 1,
+      "type": "non-ctis",
+      "offered": "fall",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 10,
+      "y": 620
+    },
+    {
+      "origSem": 2,
+      "id": "c152",
+      "code": "CTIS 152",
+      "short": "152",
+      "name": "Algorithms and Data Structures",
+      "credits": 4,
+      "ects": 6.5,
+      "sem": 2,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c151"
+      ],
+      "sections": [
+        {
+          "profId": "liman",
+          "sem": "fall",
+          "fallCount": 2,
+          "springCount": 0
+        },
+        {
+          "profId": "tin",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 4
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 190,
+      "y": 210
+    },
+    {
+      "origSem": 2,
+      "id": "c164",
+      "code": "CTIS 164",
+      "short": "164",
+      "name": "Technical Mathematics with Programming",
+      "credits": 3,
+      "ects": 5,
+      "sem": 2,
+      "type": "ctis",
+      "offered": "spring",
+      "prereqs": [
+        "c151"
+      ],
+      "sections": [
+        {
+          "profId": "topcu",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 4
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 190,
+      "y": 290
+    },
+    {
+      "origSem": 2,
+      "id": "c166",
+      "code": "CTIS 166",
+      "short": "166",
+      "name": "Information Technologies",
+      "credits": 3,
+      "ects": 5,
+      "sem": 2,
+      "type": "ctis",
+      "offered": "spring",
+      "prereqs": [],
+      "sections": [
+        {
+          "profId": "serim",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 4
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 190,
+      "y": 490
+    },
+    {
+      "origSem": 2,
+      "id": "ceng102",
+      "code": "ENG 102",
+      "short": "ENG102",
+      "name": "English and Composition II",
+      "credits": 3,
+      "ects": 5,
+      "sem": 2,
+      "type": "non-ctis",
+      "offered": "spring",
+      "prereqs": [
+        "ceng101"
+      ],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 190,
+      "y": 580
+    },
+    {
+      "origSem": 2,
+      "id": "cturk102",
+      "code": "TURK 102",
+      "short": "TRK102",
+      "name": "Turkish II",
+      "credits": 2,
+      "ects": 3.5,
+      "sem": 2,
+      "type": "non-ctis",
+      "offered": "spring",
+      "prereqs": [
+        "cturk101"
+      ],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 190,
+      "y": 620
+    },
+    {
+      "origSem": 2,
+      "id": "cmath",
+      "code": "MATH EL",
+      "short": "MATH EL",
+      "name": "Mathematics Elective",
+      "credits": 4,
+      "ects": 6.5,
+      "sem": 2,
+      "type": "slot",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 190,
+      "y": 540
+    },
+    {
+      "origSem": 3,
+      "id": "c221",
+      "code": "CTIS 221",
+      "short": "221",
+      "name": "Object Oriented Programming",
+      "credits": 4,
+      "ects": 6.5,
+      "sem": 3,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c152"
+      ],
+      "sections": [
+        {
+          "profId": "liman",
+          "sem": "fall",
+          "fallCount": 2,
+          "springCount": 0
+        },
+        {
+          "profId": "sezer",
+          "sem": "both",
+          "fallCount": 2,
+          "springCount": 2
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 380,
+      "y": 100
+    },
+    {
+      "origSem": 3,
+      "id": "c255",
+      "code": "CTIS 255",
+      "short": "255",
+      "name": "Frontend Web Technologies",
+      "credits": 3,
+      "ects": 5,
+      "sem": 3,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c151"
+      ],
+      "sections": [
+        {
+          "profId": "serkan",
+          "sem": "fall",
+          "fallCount": 4,
+          "springCount": 0
+        },
+        {
+          "profId": "nese",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 2
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 380,
+      "y": 40
+    },
+    {
+      "origSem": 3,
+      "id": "c259",
+      "code": "CTIS 259",
+      "short": "259",
+      "name": "Database Management Systems",
+      "credits": 4,
+      "ects": 6.5,
+      "sem": 3,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c152"
+      ],
+      "sections": [
+        {
+          "profId": "serim",
+          "sem": "fall",
+          "fallCount": 4,
+          "springCount": 0
+        },
+        {
+          "profId": "oumout",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 1
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 380,
+      "y": 180
+    },
+    {
+      "origSem": 3,
+      "id": "c261",
+      "code": "CTIS 261",
+      "short": "261",
+      "name": "Fundamentals of Computer Networks",
+      "credits": 3,
+      "ects": 5,
+      "sem": 3,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [
+        {
+          "profId": "amjad",
+          "sem": "both",
+          "fallCount": 1,
+          "springCount": 2
+        },
+        {
+          "profId": "hamdi",
+          "sem": "fall",
+          "fallCount": 2,
+          "springCount": 0
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 380,
+      "y": 450
+    },
+    {
+      "origSem": 3,
+      "id": "cge250",
+      "code": "GE 250",
+      "short": "GE250",
+      "name": "Collegiate Activities Program I",
+      "credits": 0,
+      "ects": 1,
+      "sem": 3,
+      "type": "non-ctis",
+      "offered": "fall",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 380,
+      "y": 540
+    },
+    {
+      "origSem": 3,
+      "id": "cssc",
+      "code": "SOC.SCI",
+      "short": "SOC EL",
+      "name": "Social Science Core Elective",
+      "credits": 3,
+      "ects": 5,
+      "sem": 3,
+      "type": "slot",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 380,
+      "y": 500
+    },
+    {
+      "origSem": 4,
+      "id": "c222",
+      "code": "CTIS 222",
+      "short": "222",
+      "name": "Object Oriented Analysis and Design",
+      "credits": 3,
+      "ects": 5,
+      "sem": 4,
+      "type": "ctis",
+      "offered": "spring",
+      "prereqs": [
+        "c221"
+      ],
+      "sections": [
+        {
+          "profId": "sevgi",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 3
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 570,
+      "y": 140
+    },
+    {
+      "origSem": 4,
+      "id": "c256",
+      "code": "CTIS 256",
+      "short": "256",
+      "name": "Introduction to Backend Development",
+      "credits": 3,
+      "ects": 5,
+      "sem": 4,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c255"
+      ],
+      "sections": [
+        {
+          "profId": "nese",
+          "sem": "fall",
+          "fallCount": 2,
+          "springCount": 0
+        },
+        {
+          "profId": "serkan",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 3
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 570,
+      "y": 40
+    },
+    {
+      "origSem": 4,
+      "id": "c264",
+      "code": "CTIS 264",
+      "short": "264",
+      "name": "Computer Algorithms",
+      "credits": 3,
+      "ects": 5,
+      "sem": 4,
+      "type": "ctis",
+      "offered": "spring",
+      "prereqs": [
+        "c152",
+        "c163"
+      ],
+      "sections": [
+        {
+          "profId": "erkan",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 3
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 570,
+      "y": 400
+    },
+    {
+      "origSem": 4,
+      "id": "cge251",
+      "code": "GE 251",
+      "short": "GE251",
+      "name": "Collegiate Activities Program II",
+      "credits": 1,
+      "ects": 2,
+      "sem": 4,
+      "type": "non-ctis",
+      "offered": "spring",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 570,
+      "y": 540
+    },
+    {
+      "origSem": 4,
+      "id": "cgen1",
+      "code": "GEN EL",
+      "short": "GEN EL",
+      "name": "General Elective",
+      "credits": 3,
+      "ects": 5,
+      "sem": 4,
+      "type": "slot",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 570,
+      "y": 460
+    },
+    {
+      "origSem": 4,
+      "id": "csci",
+      "code": "SCI EL",
+      "short": "SCI EL",
+      "name": "Science Core Elective",
+      "credits": 3,
+      "ects": 5,
+      "sem": 4,
+      "type": "slot",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 570,
+      "y": 500
+    },
+    {
+      "origSem": 5,
+      "id": "c487",
+      "code": "CTIS 487",
+      "short": "487",
+      "name": "Mobile Application Development",
+      "credits": 4,
+      "ects": 6.5,
+      "sem": 5,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c221"
+      ],
+      "sections": [
+        {
+          "profId": "nese",
+          "sem": "fall",
+          "fallCount": 2,
+          "springCount": 0
+        },
+        {
+          "profId": "sezer",
+          "sem": "both",
+          "fallCount": 1,
+          "springCount": 1
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 768,
+      "y": 48
+    },
+    {
+      "origSem": 5,
+      "id": "c359",
+      "code": "CTIS 359",
+      "short": "359",
+      "name": "Principles of Software Engineering",
+      "credits": 3,
+      "ects": 5,
+      "sem": 5,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c221"
+      ],
+      "sections": [
+        {
+          "profId": "sevgi",
+          "sem": "both",
+          "fallCount": 3,
+          "springCount": 1
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 768,
+      "y": 120
+    },
+    {
+      "origSem": 5,
+      "id": "c365",
+      "code": "CTIS 365",
+      "short": "365",
+      "name": "Applied Data Analysis",
+      "credits": 4,
+      "ects": 6.5,
+      "sem": 5,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c152"
+      ],
+      "sections": [
+        {
+          "profId": "amjad",
+          "sem": "both",
+          "fallCount": 3,
+          "springCount": 1
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 770,
+      "y": 350
+    },
+    {
+      "origSem": 5,
+      "id": "c290",
+      "code": "CTIS 290",
+      "short": "290",
+      "name": "Summer Internship",
+      "credits": 0,
+      "ects": 6,
+      "sem": 5,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [],
+      "notes": "No professor assigned",
+      "slotAssigned": null,
+      "x": 770,
+      "y": 450
+    },
+    {
+      "origSem": 5,
+      "id": "ccomd",
+      "code": "COMD 358",
+      "short": "COMD358",
+      "name": "Professional Communication",
+      "credits": 3,
+      "ects": 5,
+      "sem": 5,
+      "type": "non-ctis",
+      "offered": "both",
+      "prereqs": [
+        "ceng102"
+      ],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 760,
+      "y": 580
+    },
+    {
+      "origSem": 5,
+      "id": "chist",
+      "code": "HIST 200",
+      "short": "HIST200",
+      "name": "History of Turkey",
+      "credits": 4,
+      "ects": 6.5,
+      "sem": 5,
+      "type": "non-ctis",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 760,
+      "y": 620
+    },
+    {
+      "origSem": 6,
+      "id": "c310",
+      "code": "CTIS 310",
+      "short": "310",
+      "name": "Semester Internship",
+      "credits": 10,
+      "ects": 30,
+      "sem": 6,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c290"
+      ],
+      "sections": [],
+      "notes": "Supervised internship",
+      "slotAssigned": null,
+      "x": 950,
+      "y": 300
+    },
+    {
+      "origSem": 7,
+      "id": "c496",
+      "code": "CTIS 496",
+      "short": "496",
+      "name": "Computer and Network Security",
+      "credits": 3,
+      "ects": 5,
+      "sem": 7,
+      "type": "ctis",
+      "offered": "both",
+      "prereqs": [
+        "c290"
+      ],
+      "sections": [
+        {
+          "profId": "hamdi",
+          "sem": "both",
+          "fallCount": 2,
+          "springCount": 1
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1140,
+      "y": 450
+    },
+    {
+      "origSem": 7,
+      "id": "cis1",
+      "code": "IS EL 1",
+      "short": "IS EL 1",
+      "name": "IS Elective Slot 1",
+      "credits": 3,
+      "ects": 5,
+      "sem": 7,
+      "type": "is-elective",
+      "offered": "both",
+      "prereqs": [
+        "c310"
+      ],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1140,
+      "y": 260
+    },
+    {
+      "origSem": 7,
+      "id": "cis2",
+      "code": "IS EL 2",
+      "short": "IS EL 2",
+      "name": "IS Elective Slot 2",
+      "credits": 3,
+      "ects": 5,
+      "sem": 7,
+      "type": "is-elective",
+      "offered": "both",
+      "prereqs": [
+        "c310"
+      ],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1140,
+      "y": 350
+    },
+    {
+      "origSem": 7,
+      "id": "c411",
+      "code": "CTIS 411",
+      "short": "411",
+      "name": "Senior Project I",
+      "credits": 3,
+      "ects": 5,
+      "sem": 7,
+      "type": "ctis",
+      "offered": "fall",
+      "prereqs": [
+        "c259",
+        "c310",
+        "c359"
+      ],
+      "sections": [
+        {
+          "profId": "oumout",
+          "sem": "fall",
+          "fallCount": 3,
+          "springCount": 0
+        }
+      ],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1150,
+      "y": 180
+    },
+    {
+      "origSem": 7,
+      "id": "chciv1",
+      "code": "HCIV 101",
+      "short": "HCIV101",
+      "name": "History of Civilization I",
+      "credits": 3,
+      "ects": 5,
+      "sem": 7,
+      "type": "non-ctis",
+      "offered": "fall",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1150,
+      "y": 620
+    },
+    {
+      "origSem": 7,
+      "id": "carts",
+      "code": "ARTS EL",
+      "short": "ARTS EL",
+      "name": "Arts Core Elective",
+      "credits": 3,
+      "ects": 5,
+      "sem": 7,
+      "type": "slot",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1150,
+      "y": 580
+    },
+    {
+      "origSem": 8,
+      "id": "c456",
+      "code": "CTIS 456",
+      "short": "456",
+      "name": "Senior Project II",
+      "credits": 3,
+      "ects": 5,
+      "sem": 8,
+      "type": "ctis",
+      "offered": "spring",
+      "prereqs": [
+        "c411"
+      ],
+      "sections": [],
+      "notes": "Panel-based",
+      "slotAssigned": null,
+      "x": 1330,
+      "y": 180
+    },
+    {
+      "origSem": 8,
+      "id": "cis3",
+      "code": "IS EL 3",
+      "short": "IS EL 3",
+      "name": "IS Elective Slot 3",
+      "credits": 3,
+      "ects": 5,
+      "sem": 8,
+      "type": "is-elective",
+      "offered": "both",
+      "prereqs": [
+        "c310"
+      ],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1330,
+      "y": 330
+    },
+    {
+      "origSem": 8,
+      "id": "cis4",
+      "code": "IS EL 4",
+      "short": "IS EL 4",
+      "name": "IS Elective Slot 4",
+      "credits": 3,
+      "ects": 5,
+      "sem": 8,
+      "type": "is-elective",
+      "offered": "both",
+      "prereqs": [
+        "c310"
+      ],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1330,
+      "y": 290
+    },
+    {
+      "origSem": 8,
+      "id": "chciv2",
+      "code": "HCIV 102",
+      "short": "HCIV102",
+      "name": "History of Civilization II",
+      "credits": 3,
+      "ects": 5,
+      "sem": 8,
+      "type": "non-ctis",
+      "offered": "spring",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1330,
+      "y": 620
+    },
+    {
+      "origSem": 8,
+      "id": "cgen2",
+      "code": "GEN EL 2",
+      "short": "GEN EL 2",
+      "name": "General Elective 2",
+      "credits": 3,
+      "ects": 5,
+      "sem": 8,
+      "type": "slot",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1330,
+      "y": 540
+    },
+    {
+      "origSem": 8,
+      "id": "chum",
+      "code": "HUM EL",
+      "short": "HUM EL",
+      "name": "Humanities Core Elective",
+      "credits": 3,
+      "ects": 5,
+      "sem": 8,
+      "type": "slot",
+      "offered": "both",
+      "prereqs": [],
+      "sections": [],
+      "notes": "",
+      "slotAssigned": null,
+      "x": 1330,
+      "y": 580
+    }
+  ],
+  "isElectives": [
+    {
+      "id": "i417",
+      "code": "CTIS 417",
+      "short": "417",
+      "name": "Software Design Patterns",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 222 OR CTIS 252, CTIS 310",
+      "sections": [
+        {
+          "profId": "sevgi",
+          "sem": "fall",
+          "fallCount": 1,
+          "springCount": 0
+        }
+      ]
+    },
+    {
+      "id": "i465",
+      "code": "CTIS 465",
+      "short": "465",
+      "name": "Microservice Development",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 221, CTIS 310",
+      "sections": [
+        {
+          "profId": "alsac",
+          "sem": "both",
+          "fallCount": 1,
+          "springCount": 1
+        }
+      ]
+    },
+    {
+      "id": "i466",
+      "code": "CTIS 466",
+      "short": "466",
+      "name": "Business Process Management",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": [
+        {
+          "profId": "oumout",
+          "sem": "fall",
+          "fallCount": 1,
+          "springCount": 0
+        }
+      ]
+    },
+    {
+      "id": "i470",
+      "code": "CTIS 470",
+      "short": "470",
+      "name": "Cross-platform Application Development",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 221, CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i471",
+      "code": "CTIS 471",
+      "short": "471",
+      "name": "Introduction to Applied Machine Learning",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": [
+        {
+          "profId": "akdemir",
+          "sem": "both",
+          "fallCount": 1,
+          "springCount": 1
+        }
+      ]
+    },
+    {
+      "id": "i472",
+      "code": "CTIS 472",
+      "short": "472",
+      "name": "Human Computer Interaction",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i473",
+      "code": "CTIS 473",
+      "short": "473",
+      "name": "Cloud Computing Foundations",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": [
+        {
+          "profId": "oumout",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 1
+        }
+      ]
+    },
+    {
+      "id": "i474",
+      "code": "CTIS 474",
+      "short": "474",
+      "name": "Information Systems Auditing",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": [
+        {
+          "profId": "evrin",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 1
+        }
+      ]
+    },
+    {
+      "id": "i475",
+      "code": "CTIS 475",
+      "short": "475",
+      "name": "Architecting Scalable Software",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i476",
+      "code": "CTIS 476",
+      "short": "476",
+      "name": "Software Architectures for Simulation and Modelling",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i477",
+      "code": "CTIS 477",
+      "short": "477",
+      "name": "Systems Engineering",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i478",
+      "code": "CTIS 478",
+      "short": "478",
+      "name": "Advanced Web Technologies",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 256, CTIS 310",
+      "sections": [
+        {
+          "profId": "serkan",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 1
+        }
+      ]
+    },
+    {
+      "id": "i479",
+      "code": "CTIS 479",
+      "short": "479",
+      "name": "C# Programming in the .NET Framework",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 221 OR CTIS 251, CTIS 310",
+      "sections": [
+        {
+          "profId": "alsac",
+          "sem": "fall",
+          "fallCount": 1,
+          "springCount": 0
+        }
+      ]
+    },
+    {
+      "id": "i480",
+      "code": "CTIS 480",
+      "short": "480",
+      "name": "iOS Application Development",
+      "credits": 4,
+      "ects": 6.5,
+      "prereqCodes": "CTIS 310, CTIS 487",
+      "sections": [
+        {
+          "profId": "amjad",
+          "sem": "fall",
+          "fallCount": 1,
+          "springCount": 0
+        }
+      ]
+    },
+    {
+      "id": "i483",
+      "code": "CTIS 483",
+      "short": "483",
+      "name": "Database Administration",
+      "credits": 4,
+      "ects": 6.5,
+      "prereqCodes": "CTIS 259, CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i484",
+      "code": "CTIS 484",
+      "short": "484",
+      "name": "Advanced Topics in Programming",
+      "credits": 4,
+      "ects": 6.5,
+      "prereqCodes": "CTIS 221 OR CTIS 251, CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i485",
+      "code": "CTIS 485",
+      "short": "485",
+      "name": "Information Storage and Management",
+      "credits": 4,
+      "ects": 6.5,
+      "prereqCodes": "CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i486",
+      "code": "CTIS 486",
+      "short": "486",
+      "name": "Linux System Administration",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 166, CTIS 310",
+      "sections": [
+        {
+          "profId": "fisek",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 1
+        }
+      ]
+    },
+    {
+      "id": "i488",
+      "code": "CTIS 488",
+      "short": "488",
+      "name": "Data Analysis",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310, CTIS 365",
+      "sections": []
+    },
+    {
+      "id": "i489",
+      "code": "CTIS 489",
+      "short": "489",
+      "name": "Interactive Computer Graphics Programming",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i491",
+      "code": "CTIS 491",
+      "short": "491",
+      "name": "Software Validation Verification and Testing",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": [
+        {
+          "profId": "herk",
+          "sem": "fall",
+          "fallCount": 1,
+          "springCount": 0
+        },
+        {
+          "profId": "ergezer",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 1
+        }
+      ]
+    },
+    {
+      "id": "i492",
+      "code": "CTIS 492",
+      "short": "492",
+      "name": "Information Systems Outsourcing",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i493",
+      "code": "CTIS 493",
+      "short": "493",
+      "name": "Information Systems Project Management",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i262",
+      "code": "CTIS 262",
+      "short": "262",
+      "name": "Applied Computer Networks",
+      "credits": 4,
+      "ects": 6.5,
+      "prereqCodes": "CTIS 261, CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i363",
+      "code": "CTIS 363",
+      "short": "363",
+      "name": "Ethical & Social Issues in IS",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "CTIS 165, CTIS 310",
+      "sections": [
+        {
+          "profId": "sagdi",
+          "sem": "spring",
+          "fallCount": 0,
+          "springCount": 1
+        }
+      ]
+    },
+    {
+      "id": "i285",
+      "code": "CTIS 285",
+      "short": "285",
+      "name": "Hospitality Industry Computerization",
+      "credits": 3,
+      "ects": 5,
+      "prereqCodes": "",
+      "sections": [
+        {
+          "profId": "gunes",
+          "sem": "both",
+          "fallCount": 1,
+          "springCount": 1
+        }
+      ]
+    },
+    {
+      "id": "i497",
+      "code": "CTIS 497",
+      "short": "497",
+      "name": "Scaling Networks",
+      "credits": 4,
+      "ects": 6.5,
+      "prereqCodes": "CTIS 262, CTIS 310",
+      "sections": []
+    },
+    {
+      "id": "i498",
+      "code": "CTIS 498",
+      "short": "498",
+      "name": "Wide Area Networks",
+      "credits": 4,
+      "ects": 6.5,
+      "prereqCodes": "CTIS 262, CTIS 310",
+      "sections": []
+    }
+  ],
+  "constants": {
+    "seasons": [
+      "Fall",
+      "Spring",
+      "Fall",
+      "Spring",
+      "Fall",
+      "Spring",
+      "Intern.",
+      "Fall",
+      "Spring"
+    ],
+    "numSemesters": 8,
+    "slotWidth": 190,
+    "cardWidth": 108,
+    "noProfIds": [
+      "c290",
+      "c310",
+      "c456"
+    ]
+  }
+}
