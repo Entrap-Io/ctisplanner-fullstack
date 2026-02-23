@@ -945,7 +945,7 @@ function showSave() {
   document.getElementById('slm-b').innerHTML = `
     <div class="form-row">
       <label>Your Name</label>
-      <input id="save-by" placeholder="Ehsan Shareef" value="${localStorage.getItem('ctis_saved_by') || ''}">
+      <input id="save-by" placeholder="Anonymous" value="${localStorage.getItem('ctis_saved_by') || ''}">
     </div>
     <div class="form-row">
       <label>Layout Name</label>
